@@ -11,9 +11,9 @@
                     <div class="card-columns" >
                       <div class="card-body">
                         <h6 class="card-title"><strong>Event ID:</strong>{{ event.id }} </h6>
-                        <p class="card-text"><strong>Name :</strong> {{ event.event_name }} </p>
-                        <p class="card-text"><strong>Created Date : </strong>{{ event.created_by }} </p>
-                        <p class="card-text"><strong>Created By : </strong>{{ event.created_date }} </p>
+                        <p class="card-text"><strong>Name :</strong> {{ event.eventname }} </p>
+                        <p class="card-text"><strong>Created Date : </strong>{{ event.createdby }} </p>
+                        <p class="card-text"><strong>Created By : </strong>{{ event.updateddate }} </p>
                         <div class="">
                             <a class="btn btn-primary" (click)="getEventDetails(event.id)"  role="button"><strong>More..</strong></a>&nbsp;
                             <a class="btn btn-success" href="#" role="button"><strong>Update</strong></a>&nbsp;

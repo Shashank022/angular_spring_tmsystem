@@ -9,7 +9,7 @@ import {HttpClientModule, HttpClient} from '@angular/common/http';
 })
 export class EventsComponent {
 
-  private APP_URL : string = "http://localhost:5020";
+  private APP_URL : string = "http://localhost:3000/api/";
   public response: any;
   public isVisible : boolean = false;
 
@@ -17,7 +17,7 @@ export class EventsComponent {
   }
 
   ngOnInit(): void {
-    this.http.get(this.APP_URL + '/eventlist').subscribe(
+    this.http.get(this.APP_URL + '/events').subscribe(
       data => {
         this.response = data;
         console.log(data);
