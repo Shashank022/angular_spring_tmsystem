@@ -1,19 +1,30 @@
 
 <div class="container">
     <div>
-        <p class="text-center">Welcome to  TM System</p>
-        <span class="btn btn-primary" (click) = "getListofAllEvents()"> Events</span>
-    <div  *ngFor="let event of response" >
-        <div class="card-columns">
-            <div class="card">
-                <div class="card-body">
-                    <h6 class="card-title"><strong>Event ID:</strong>{{ event.id }} </h6>
-                    <p class="card-title"><strong>Name :</strong> {{ event.event_name }} </p>
-                    <p class="card-title"><strong>Created Date : </strong>{{ event.created_by }} </p>
-                    <p class="card-title"><strong>Created By : </strong>{{ event.created_date }} </p>
-                <a href="#" class="btn btn-primary"><strong>Go somewhere</strong></a>
+        <br>
+        <h3 class="text-center"><u>Welcome to  TM System</u></h3>
+        <br><br>
+        <h5 class="text-left"><strong>List of Events:</strong></h5>
+        <span>
+            <div  *ngFor="let event of response" >
+                <div class="card border-success mb-3">
+                    <div class="card-columns" >
+                      <div class="card-body">
+                        <h6 class="card-title"><strong>Event ID:</strong>{{ event.id }} </h6>
+                        <p class="card-text"><strong>Name :</strong> {{ event.event_name }} </p>
+                        <p class="card-text"><strong>Created Date : </strong>{{ event.created_by }} </p>
+                        <p class="card-text"><strong>Created By : </strong>{{ event.created_date }} </p>
+                        <div class="">
+                            <a class="btn btn-primary" href="#" role="button"><strong>More..</strong></a>&nbsp;
+                            <a class="btn btn-success" href="#" role="button"><strong>Update</strong></a>&nbsp;
+                            <a class="btn btn-danger" href="#" role="button"><strong>Delete</strong></a>    
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
         </div>
+    </span>
+
     </div>
 </div>

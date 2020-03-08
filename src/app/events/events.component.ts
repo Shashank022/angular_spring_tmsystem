@@ -17,9 +17,6 @@ export class EventsComponent {
   }
 
   ngOnInit(): void {
-  }
-
-  getListofAllEvents(){
     this.http.get(this.APP_URL + '/eventlist').subscribe(
       data => {
         this.response = data;
@@ -29,11 +26,7 @@ export class EventsComponent {
         console.log('Error occured', error);
       }
     );
-
-
   }
 
-
- 
 
 }
