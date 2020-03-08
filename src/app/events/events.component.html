@@ -1,0 +1,19 @@
+
+<div class="container">
+    <div>
+        <p class="text-center">Welcome to  TM System</p>
+        <span class="btn btn-primary" (click) = "getListofAllEvents()"> Events</span>
+    <div  *ngFor="let event of response" >
+        <div class="card-columns">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-title"><strong>Event ID:</strong>{{ event.id }} </h6>
+                    <p class="card-title"><strong>Name :</strong> {{ event.event_name }} </p>
+                    <p class="card-title"><strong>Created Date : </strong>{{ event.created_by }} </p>
+                    <p class="card-title"><strong>Created By : </strong>{{ event.created_date }} </p>
+                <a href="#" class="btn btn-primary"><strong>Go somewhere</strong></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
