@@ -6,7 +6,7 @@
         <br><br>
         <h5 class="text-left"><strong>List of Events:</strong></h5>
         <span>
-            <div  *ngFor="let event of response" >
+            <div  *ngFor="let event of response">
                 <div class="card border-success mb-3">
                     <div class="card-columns" >
                       <div class="card-body">
@@ -15,11 +15,13 @@
                         <p class="card-text"><strong>Created Date : </strong>{{ event.created_by }} </p>
                         <p class="card-text"><strong>Created By : </strong>{{ event.created_date }} </p>
                         <div class="">
-                            <a class="btn btn-primary" href="#" role="button"><strong>More..</strong></a>&nbsp;
+                            <a class="btn btn-primary" (click)="getEventDetails(event.id)"  role="button"><strong>More..</strong></a>&nbsp;
                             <a class="btn btn-success" href="#" role="button"><strong>Update</strong></a>&nbsp;
-                            <a class="btn btn-danger" href="#" role="button"><strong>Delete</strong></a>    
+                            <a class="btn btn-danger" (click)="deleteEvent(event.id)"  role="button"><strong>Delete</strong></a>    
                         </div>
-                        
+                        <div *ngIf="isVisible">
+                            <p>Welcome to the new Div part </p>
+                        </div>
                     </div>
                 </div>
             </div>
