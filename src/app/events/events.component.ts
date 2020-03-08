@@ -39,7 +39,6 @@ export class EventsComponent {
         console.log('Error occured', error);
       }
     );
-
   }
 
   deleteEvent(eventid){
