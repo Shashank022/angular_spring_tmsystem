@@ -8,11 +8,11 @@ const routes: Routes = [
   {
     path: 'teams',
     component: TeamsComponent,
-},
-{
-  path: 'tasks',
-  component: TasksComponent,
-},
+  },
+  {
+    path: 'tasks',
+    component: TasksComponent,
+  },
 ];
 
 @NgModule({
@@ -20,4 +20,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 
-export class AppRoutingModule { }
+export class AppRoutingModule {}
+export const routingComponents=[TeamsComponent, TasksComponent];
