@@ -29,7 +29,7 @@ export class EventsComponent {
   }
 
   getEventDetails(eventid){
-    this.http.get(this.APP_URL + '/eventlist/').subscribe(
+    this.http.get(this.APP_URL + '/events/').subscribe(
       data => {
         this.response = data;
         this.isVisible = true;
@@ -42,7 +42,7 @@ export class EventsComponent {
   }
 
   deleteEvent(eventid){
-    this.http.delete(this.APP_URL + '/eventlist/'+ eventid).subscribe(
+    this.http.delete(this.APP_URL + '/events/'+ eventid).subscribe(
       data => {
         this.response = data;
         console.log(data);
@@ -58,5 +58,30 @@ export class EventsComponent {
    document.defaultView.location.reload();
   }
 
+  getTeamDetails(){
+    this.http.get(this.APP_URL + '/teams/').subscribe(
+      data => {
+        this.response = data;
+        this.isVisible = true;
+        console.log(data);
+      },
+      error => {
+        console.log('Error occured', error);
+      }
+    );
+  }
+
+  getTaskDetails(){
+    this.http.get(this.APP_URL + '/teams/').subscribe(
+      data => {
+        this.response = data;
+        this.isVisible = true;
+        console.log(data);
+      },
+      error => {
+        console.log('Error occured', error);
+      }
+    );
+  }
 
 }

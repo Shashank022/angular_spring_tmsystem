@@ -7,6 +7,7 @@ import { EventsComponent } from './events/events.component';
 import { TeamsComponent } from './teams/teams.component';
 import { TasksComponent } from './tasks/tasks.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
