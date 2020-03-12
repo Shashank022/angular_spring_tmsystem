@@ -18,13 +18,11 @@
                             <a class="btn btn-primary" (click)="getEventDetails(event.id)"  role="button"><strong>More..</strong></a>&nbsp;
                             <a class="btn btn-success" href="#" role="button"><strong>Update</strong></a>&nbsp;
                             <a class="btn btn-danger" (click)="deleteEvent(event.id)"  role="button"><strong>Delete</strong></a>&nbsp;    
-                            <a routerLink="/registration"><button class="btn btn-success" > Submit </button></a>
-                            <a routerLink="teams" class="btn btn-warning" role="button" ><strong>Teams</strong></a> &nbsp;   
-                            <a routerLink="tasks" class="btn btn-info" role="button" ><strong>Tasks</strong></a>    
+                            <a routerLink="events" class="btn btn-warning" role="button"><strong>Events</strong></a> &nbsp;   
+                            <a routerLink="teams" class="btn btn-warning" role="button"><strong>Teams</strong></a> &nbsp;   
+                            <a routerLink="tasks" class="btn btn-warning" role="button"><strong>Tasks</strong></a>    
                         </div>
-                        <div *ngIf="isVisible">
-                            <p>Welcome to the new Div part </p>
-                        </div>
+
                     </div>
                 </div>
             </div>
