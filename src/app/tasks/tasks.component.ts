@@ -14,7 +14,7 @@ export class TasksComponent implements OnInit {
   public response: any;
 
   ngOnInit(): void {
-    this.http.get(this.APP_URL + '/teams/').subscribe(
+    this.http.get(this.APP_URL + '/tasks/').subscribe(
       data => {
         this.response = data;
         console.log(data);
@@ -23,5 +23,34 @@ export class TasksComponent implements OnInit {
         console.log('Error occured', error);
       }
     );
+  }
+
+  getTaskDetails(eventid){
+    this.http.get(this.APP_URL + '/events/').subscribe(
+      data => {
+        this.response = data;
+        console.log(data);
+      },
+      error => {
+        console.log('Error occured', error);
+      }
+    );
+  }
+
+  deleteTask(eventid){
+    this.http.delete(this.APP_URL + '/events/'+ eventid).subscribe(
+      data => {
+        this.response = data;
+        console.log(data);
+      },
+      error => {
+        console.log('Error occured', error);
+      }
+    );
+    this.refreshPage();
+  }
+
+  refreshPage() {
+   document.defaultView.location.reload();
   }
 }

@@ -58,21 +58,4 @@ export class EventsComponent {
    document.defaultView.location.reload();
   }
 
-  getTeamDetails(){
-
-  }
-
-  getTaskDetails(){
-    this.http.get(this.APP_URL + '/teams/').subscribe(
-      data => {
-        this.response = data;
-        this.isVisible = true;
-        console.log(data);
-      },
-      error => {
-        console.log('Error occured', error);
-      }
-    );
-  }
-
 }

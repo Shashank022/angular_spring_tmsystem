@@ -1,1 +1,32 @@
-<p>tasks works!</p>
+
+<div class="container">
+    <div>
+        <br>
+        <h3 class="text-center"><u>Welcome to  TM System</u></h3>
+        <br><br>
+        <h5 class="text-left"><strong>List of Tasks:</strong></h5>
+        <span>
+            <div  *ngFor="let task of response">
+                <div class="card border-success mb-3">
+                    <div class="card-columns" >
+                      <div class="card-body">
+                        <h6 class="card-title"><strong>Event ID:</strong>{{ task.id }} </h6>
+                        <p class="card-text"><strong>Name :</strong> {{ task.taskname }} </p>
+                        <p class="card-text"><strong>Created Date : </strong>{{ task.createdby }} </p>
+                        <p class="card-text"><strong>Created By : </strong>{{ task.updateddate }} </p>
+                        <div class="">
+                            <a class="btn btn-primary" (click)="getTaskDetails(task.id)"  role="button"><strong>More..</strong></a>&nbsp;
+                            <a class="btn btn-success" href="#" role="button"><strong>Update</strong></a>&nbsp;
+                            <a class="btn btn-danger" (click)="deleteTask(task.id)"  role="button"><strong>Delete</strong></a>&nbsp;    
+                            <a routerLink="/registration"><button class="btn btn-success" > Submit </button></a>
+                            <a routerLink="teams" class="btn btn-warning" role="button" ><strong>Teams</strong></a> &nbsp;   
+                            <a routerLink="tasks" class="btn btn-info" role="button" ><strong>Tasks</strong></a>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </span>
+
+    </div>
+</div>
