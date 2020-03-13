@@ -26,7 +26,7 @@ export class TeamsComponent implements OnInit {
   }
 
   getTeamDetails(eventid){
-    this.http.get(this.APP_URL + '/events/').subscribe(
+    this.http.get(this.APP_URL + '/teams/').subscribe(
       data => {
         this.response = data;
         console.log(data);
