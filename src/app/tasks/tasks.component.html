@@ -9,16 +9,13 @@
                       <div class="card-body">
                         <h6 class="card-title"><strong>Event ID:</strong>{{ task.id }} </h6>
                         <p class="card-text"><strong>Name :</strong> {{ task.taskname }} </p>
-                        <p class="card-text"><strong>Created Date : </strong>{{ task.createdby }} </p>
+                        <p class="card-text"><strong>Created Date : </strong>{{ task.taskdate }} </p>
                         <p class="card-text"><strong>Created By : </strong>{{ task.updateddate }} </p>
                         <div class="">
-                            <a class="btn btn-primary" (click)="getTaskDetails(task.id)"  role="button"><strong>More..</strong></a>&nbsp;
+                            <a class="btn btn-warning" (click)="getTaskDetails(task.id)"  role="button"><strong>More..</strong></a>&nbsp;
                             <a class="btn btn-success" href="#" role="button"><strong>Update</strong></a>&nbsp;
                             <a class="btn btn-danger" (click)="deleteTask(task.id)"  role="button"><strong>Delete</strong></a>&nbsp;    
-                            <a routerLink="events" class="btn btn-warning" role="button" ><strong>Events</strong></a> &nbsp;   
-                            <a routerLink="teams" class="btn btn-warning" role="button" ><strong>Teams</strong></a> &nbsp;   
-                            <a routerLink="tasks" class="btn btn-info" role="button" ><strong>Tasks</strong></a>    
-                        </div>
+                    </div>
                     </div>
                 </div>
             </div>

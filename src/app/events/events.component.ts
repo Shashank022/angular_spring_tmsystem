@@ -58,4 +58,10 @@ export class EventsComponent {
    document.defaultView.location.reload();
   }
 
+  formatDate(date){
+    var date1 = new Date(date);
+    var newdate= (date.getMonth() + 1) + '/' + date1.getDate() + '/' +  date1.getFullYear();
+    return newdate;
+  } 
+
 }
