@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
-import { resolve } from 'dns';
-import { rejects } from 'assert';
 
 
 @Component({
@@ -41,7 +39,7 @@ export class EventsComponent {
                     this.response = data;
                     this.isVisible = true;
                     console.log(data);
-                  }))
+                  }));
       } else {
           reject('Error occured');
         };
