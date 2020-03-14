@@ -9,8 +9,7 @@
                       <div class="card-body">
                         <h6 class="card-title"><strong>Event ID:</strong>{{ team.id }} </h6>
                         <p class="card-text"><strong>Name :</strong> {{ team.teamname }} </p>
-                        <p class="card-text"><strong>Created Date : </strong>{{ team.createdby }} </p>
-                        <p class="card-text"><strong>Created By : </strong>{{ team.updateddate | date}} </p>
+                        <p class="card-text"><strong>Created By : </strong>{{ team.createdby}} </p>
                         <div class="">
                             <a class="btn btn-warning" (click)="getTeamDetails(team.id)"  role="button"><strong>More..</strong></a>&nbsp;
                             <a class="btn btn-success" href="#" role="button"><strong>Update</strong></a>&nbsp;

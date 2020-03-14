@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
+import { resolve } from 'dns';
+import { rejects } from 'assert';
 
 
 @Component({
@@ -29,17 +31,23 @@ export class EventsComponent {
   }
 
   getEventDetails(eventid){
-    this.http.get(this.APP_URL ).subscribe(
-      data => {
-        this.response = data;
-        this.isVisible = true;
-        console.log(data);
-      },
-      error => {
-        console.log('Error occured', error);
-      }
-    );
-  }
+    debugger;
+    return new Promise((resolve, reject) => {
+      let error = false;
+      if(!error){
+                resolve(
+                this.http.get(this.APP_URL+ "/events/"+ eventid ).subscribe(
+                  data => {
+                    this.response = data;
+                    this.isVisible = true;
+                    console.log(data);
+                  }))
+      } else {
+          reject('Error occured');
+        };
+    })
+
+  };
 
   deleteEvent(eventid){
     this.http.delete(this.APP_URL+ eventid).subscribe(

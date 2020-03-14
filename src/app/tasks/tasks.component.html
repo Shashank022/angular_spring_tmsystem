@@ -9,8 +9,8 @@
                       <div class="card-body">
                         <h6 class="card-title"><strong>Event ID:</strong>{{ task.id }} </h6>
                         <p class="card-text"><strong>Name :</strong> {{ task.taskname }} </p>
-                        <p class="card-text"><strong>Created Date : </strong>{{ task.taskdate }} </p>
-                        <p class="card-text"><strong>Created By : </strong>{{ task.updateddate | date }} </p>
+                        <p class="card-text"><strong>Created Date : </strong>{{ task.taskdate | date}} </p>
+                        <p class="card-text"><strong>Created By : </strong>{{ task.taskby }} </p>
                         <div class="">
                             <a class="btn btn-warning" (click)="getTaskDetails(task.id)"  role="button"><strong>More..</strong></a>&nbsp;
                             <a class="btn btn-success" href="#" role="button"><strong>Update</strong></a>&nbsp;
