@@ -59,6 +59,7 @@ export class EventsComponent {
   }
 
   formatDate(date){
+    debugger;
     var date1 = new Date(date);
     var newdate= (date.getMonth() + 1) + '/' + date1.getDate() + '/' +  date1.getFullYear();
     return newdate;
