@@ -11,14 +11,19 @@
                         <p class="card-text"><strong>Name :</strong> {{ event.eventname }} </p>
                         <p class="card-text"><strong>Created Date : </strong>{{ event.createdby }} </p>
                         <p class="card-text"><strong>Created By : </strong>{{event.updateddate | date}} </p>
-                        <div class="">
+                        <br>
+                        <div style="text-align:center;">
                             <a class="btn btn-warning" (click)="getEventDetails(event.id)"  role="button"><strong>More..</strong></a>&nbsp;
                             <a class="btn btn-success" href="#" role="button"><strong>Update</strong></a>&nbsp;
                             <a class="btn btn-danger" (click)="deleteEvent(event.id)"  role="button"><strong>Delete</strong></a>&nbsp;     
                         </div>
-
                     </div>
                 </div>
+            </div>
+        </div >
+        <div ngif="isVisible">
+            <div class="card-columns" >
+                <div>Welcome to the New Division Class</div>
             </div>
         </div>
     </span>

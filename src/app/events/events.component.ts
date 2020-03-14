@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 
-
 @Component({
   selector: 'app-events',
   templateUrl: './events.component.html',
@@ -43,7 +42,9 @@ export class EventsComponent {
       } else {
           reject('Error occured');
         };
-    })
+    }).then(function(value){
+      console.log("We have sucessfully ompleted the getEventDetails.....!!!");
+    });
 
   };
 
