@@ -48,8 +48,30 @@ export class EventsComponent {
 
   };
 
+  updateEventDetails(eventid){
+    debugger;
+    return new Promise((resolve, reject) => {
+      let error = false;
+      if(!error){
+                resolve(
+                this.http.get(this.APP_URL+ "/events/"+ eventid ).subscribe(
+                  data => {
+                    this.response = data;
+                    this.isVisible = true;
+                    console.log(data);
+                  }));
+      } else {
+          reject('Error occured');
+        };
+    }).then(function(value){
+      console.log("We have sucessfully ompleted the updateEventDetails.....!!!");
+    });
+
+  };
+
   deleteEvent(eventid){
-    this.http.delete(this.APP_URL+ eventid).subscribe(
+    debugger;
+    this.http.delete(this.APP_URL+ "/events/" +eventid).subscribe(
       data => {
         this.response = data;
         console.log(data);
