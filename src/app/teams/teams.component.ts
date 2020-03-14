@@ -14,7 +14,7 @@ export class TeamsComponent implements OnInit {
   public response: any;
 
   ngOnInit(): void {
-    this.http.get(this.APP_URL + '/teams/').subscribe(
+    this.http.get(this.APP_URL + 'teams').subscribe(
       data => {
         this.response = data;
         console.log(data);
@@ -28,7 +28,7 @@ export class TeamsComponent implements OnInit {
 
   
   getTeamDetails(eventid){
-    this.http.get(this.APP_URL + '/teams/').subscribe(
+    this.http.get(this.APP_URL ).subscribe(
       data => {
         this.response = data;
         console.log(data);
@@ -40,7 +40,7 @@ export class TeamsComponent implements OnInit {
   }
 
   deleteTeam(teamid){
-    this.http.delete(this.APP_URL + '/teams/'+ teamid).subscribe(
+    this.http.delete(this.APP_URL+ teamid).subscribe(
       data => {
         this.response = data;
         console.log(data);

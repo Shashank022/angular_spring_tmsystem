@@ -17,7 +17,7 @@ export class EventsComponent {
   }
 
   ngOnInit(): void {
-    this.http.get(this.APP_URL + '/events').subscribe(
+    this.http.get(this.APP_URL + 'events').subscribe(
       data => {
         this.response = data;
         console.log(data);
@@ -29,7 +29,7 @@ export class EventsComponent {
   }
 
   getEventDetails(eventid){
-    this.http.get(this.APP_URL + '/events/').subscribe(
+    this.http.get(this.APP_URL ).subscribe(
       data => {
         this.response = data;
         this.isVisible = true;
@@ -42,7 +42,7 @@ export class EventsComponent {
   }
 
   deleteEvent(eventid){
-    this.http.delete(this.APP_URL + '/events/'+ eventid).subscribe(
+    this.http.delete(this.APP_URL+ eventid).subscribe(
       data => {
         this.response = data;
         console.log(data);

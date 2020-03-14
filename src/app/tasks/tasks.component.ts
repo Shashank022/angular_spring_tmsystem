@@ -14,7 +14,7 @@ export class TasksComponent implements OnInit {
   public response: any;
 
   ngOnInit(): void {
-    this.http.get(this.APP_URL + '/tasks/').subscribe(
+    this.http.get(this.APP_URL + 'tasks').subscribe(
       data => {
         this.response = data;
         console.log(data);
@@ -25,8 +25,8 @@ export class TasksComponent implements OnInit {
     );
   }
 
-  getTaskDetails(eventid){
-    this.http.get(this.APP_URL + '/events/').subscribe(
+  getTaskDetails(taskid){
+    this.http.get(this.APP_URL ).subscribe(
       data => {
         this.response = data;
         console.log(data);
@@ -37,8 +37,8 @@ export class TasksComponent implements OnInit {
     );
   }
 
-  deleteTask(eventid){
-    this.http.delete(this.APP_URL + '/events/'+ eventid).subscribe(
+  deleteTask(taskid){
+    this.http.delete(this.APP_URL + taskid).subscribe(
       data => {
         this.response = data;
         console.log(data);
